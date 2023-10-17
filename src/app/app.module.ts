@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PerfilComponent } from './perfil/perfil.component';
+import { ControlReportesComponent } from './control-reportes/control-reportes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PerfilComponent
+    PerfilComponent,
+    ControlReportesComponent
   ],
   imports: [
     BrowserModule,
