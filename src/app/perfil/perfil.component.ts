@@ -10,7 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class PerfilComponent implements OnInit {
   usuarioId: string | null = null;
-  correoElectronico:string= '';
+  username:string= '';
   datosUsuario: any = {};
   constructor(private route: ActivatedRoute,
     private authService: AuthService,
@@ -18,42 +18,13 @@ export class PerfilComponent implements OnInit {
     private router: Router){}
 
   ngOnInit() {
-    console.log(this.datosUsuario.correo_electronico);
-    this.route.params.subscribe((params) => {
-      this.correoElectronico = params['correoElectronico'];
-      this.authService.getUserProfile(this.correoElectronico).subscribe(
-        (profileData: any) => {
-          console.log(profileData);
-          this.datosUsuario = profileData;  
-          
-          if (this.datosUsuario.img_base64 !== null) {
-            // Crear una URL segura a partir de los datos base64
-            this.datosUsuario.img_base64 = this.sanitizer.bypassSecurityTrustUrl('data:image/jpeg;base64,' + this.datosUsuario.img_base64);
-          }
-          
-          console.log(this.datosUsuario);
-        },
-        (error: any) => {
-          console.error('Error al cargar el perfil del usuario:', error);
-        }
-      );
-    });
+   this.route.params.subscribe((params)=>{
+    this.username = params['username']
+   })
     
   }
  
   
 
-  perfil_menu() {
-    if (this.authService.isAuthenticated()) {
-      const correoElectronico = this.authService.getCorreoElectronico();
-      if (correoElectronico) {
-        this.navigateToUserProfile(correoElectronico);
-      }
-    } else {
-      this.router.navigateByUrl('/login');
-    }
-  }
-  private navigateToUserProfile(correoElectronico: string) {
-    this.router.navigate(['/perfil', correoElectronico]);
-  }
+  
 }

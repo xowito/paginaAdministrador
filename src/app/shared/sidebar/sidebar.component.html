@@ -1,0 +1,46 @@
+<nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+    <!-- Sidebar content here -->
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Control de reportes</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a (click)="goToReportes()" class="btn nav-link active" aria-current="page">
+            <svg class="bi me-2" width="16" height="16"></svg>
+            Reportes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a (click)="logout()" class="btn nav-link text-white" >
+            <svg class="bi me-2" width="16" height="16"></svg>
+            Cerrar sesión
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/" class="btn nav-link text-white" >
+            <svg class="bi me-2" width="16" height="16"></svg>
+           Perfil
+          </a>
+        </li>
+       <li class="nav-item">
+        <a href="http://localhost:3000/goto/Ryj9kK7Ig?orgId=1" class="btn nav-link text-white" >
+          <svg class="bi me-2" width="16" height="16"></svg>
+           dashboard
+        </a>
+       </li>
+       
+      </ul>
+      <hr>
+      <div>
+        <a class="d-flex align-items-center text-white text-decoration-none">
+          <img src="../../../assets/JOBBY.png" alt="" width="32" height="32" class="rounded-circle me-2">&nbsp;
+          <strong>{{username}}</strong>
+        </a>
+      </div>
+      
+      
+    </div>
+  </nav>

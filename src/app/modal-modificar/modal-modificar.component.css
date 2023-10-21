@@ -1,20 +1,4 @@
-
-  ng-icon {
-    font-size: 24px; /* Tamaño de las estrellas */
-  }
-  
-  .heroStarSolid {
-    color: gold; /* Color de las estrellas llenas */
-    border-color: black;
-  }
-  
-  .heroStar {
-    color: gray; /* Color de las estrellas vacías */
-  }
-  ng-icon[name="alert-circle"] {
-    color: yellow; /* Cambia "yellow" al color amarillo que desees */
-  }
-  .modal {
+.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */

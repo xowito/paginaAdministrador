@@ -8,6 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ControlReportesComponent } from './control-reportes/control-reportes.component';
+import { RegistroComponent } from './registro/registro.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { featherAirplay } from '@ng-icons/feather-icons';
+import { heroUsers, heroStar } from '@ng-icons/heroicons/outline';
+import { heroStarSolid } from '@ng-icons/heroicons/solid';
+import { NgIconsModule } from '@ng-icons/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModificarComponent } from './modal-modificar/modal-modificar.component';
 
 
 @NgModule({
@@ -15,13 +23,21 @@ import { ControlReportesComponent } from './control-reportes/control-reportes.co
     AppComponent,
     LoginComponent,
     PerfilComponent,
-    ControlReportesComponent
+    ControlReportesComponent,
+    RegistroComponent,
+    SidebarComponent,
+    ModalModificarComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgIconsModule.withIcons({ featherAirplay, heroUsers, heroStar, heroStarSolid }),
+    BrowserAnimationsModule, // Importa BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

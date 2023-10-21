@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  correo_electronico: string = '';
+  token:string='';
+  username: string = '';
   password: string = '';
 
   constructor(private authService: AuthService,
@@ -19,10 +19,10 @@ export class LoginComponent implements OnInit {
     //this.authService.logout();
     if (this.authService.isAuthenticated()) {
       
-      const correoElectronico = this.authService.getCorreoElectronico();
+      const username = this.authService.getUsername();
 
-      if (correoElectronico) {
-        this.router.navigate([`/perfil/${correoElectronico}`]);
+      if (username) {
+        this.router.navigateByUrl(`/perfil/${username}`);
       }
     }
     
@@ -30,13 +30,13 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    this.authService.login(this.correo_electronico, this.password).subscribe(
+    this.authService.login(this.username, this.password).subscribe(
       (response: any) => {
         if (response && response.mensaje) {
           console.log('Inicio de sesión exitoso:', response.mensaje);
           this.authService.saveToken(response.token); // Almacena el token
           
-          this.router.navigate([`/perfil/${this.correo_electronico}`]);
+          this.router.navigateByUrl(`/perfil/${this.username}`);
         } else {
           console.error('Respuesta inesperada del servidor:', response);
         }
@@ -46,5 +46,6 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
 
 }
