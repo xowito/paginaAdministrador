@@ -57,6 +57,7 @@ export class ControlReportesComponent implements OnInit {
     okButton(resenaId: number) {
       Swal.fire({
         title: 'Seguro que esta reseña cumple los requisitos?',
+        timerProgressBar:true,
         showCloseButton: true,
         showCancelButton: true,
         confirmButtonText: 'Si',
@@ -79,26 +80,26 @@ export class ControlReportesComponent implements OnInit {
       });
       
     }
-    showCustomAlert() {
-      Swal.fire({
-        title: '¿Qué acción deseas realizar?',
-        showCloseButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Ok',
-        cancelButtonText: 'Modificar',
-      }).then((result: SweetAlertResult<any>) => {
-        if (result.isConfirmed) {
-          // Lógica para "Ok"
-          //this.authService.realizarAccionOk();
-          console.log("Ok funcionando");
-        } else if (result.dismiss === Swal.DismissReason.cancel) {
-          // Lógica para "Modificar"
-          //this.router.navigate(['/modificar-reseña']);
-          console.log("Modificar funcionando");
-          // this.router.navigate([`/perfil/${this.username}/control-reportes/modificar-resena/${this.resenaId}`])
-        }
-      });
-    }
+    // showCustomAlert() {
+    //   Swal.fire({
+    //     title: '¿Qué acción deseas realizar?',
+    //     showCloseButton: true,
+    //     showCancelButton: true,
+    //     confirmButtonText: 'Ok',
+    //     cancelButtonText: 'Modificar',
+    //   }).then((result: SweetAlertResult<any>) => {
+    //     if (result.isConfirmed) {
+    //       
+    //       //this.authService.realizarAccionOk();
+    //       console.log("Ok funcionando");
+    //     } else if (result.dismiss === Swal.DismissReason.cancel) {
+    //       
+    //       //this.router.navigate(['/modificar-reseña']);
+    //       console.log("Modificar funcionando");
+    //       // this.router.navigate([`/perfil/${this.username}/control-reportes/modificar-resena/${this.resenaId}`])
+    //     }
+    //   });
+    // }
 
 
    
