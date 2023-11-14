@@ -13,11 +13,11 @@ export class ModalModificarComponent {
   resenaData = {
     id_reseña:'',
     descripcion:'',
-    calificacion:'',
+    // calificacion:'',
     estado:'',
     id_solicitud:'',
-    created_at:'',
-    updated_at:''
+    // created_at:'',
+    // updated_at:''
   }
 
   resenaId:number=0;
@@ -40,11 +40,11 @@ export class ModalModificarComponent {
     console.log(this.resenasObtenidas);
     this.resenaData.id_reseña = this.resenasObtenidas[0].id_resena;
     this.resenaData.descripcion = this.resenasObtenidas[0].descripcion;
-    this.resenaData.calificacion = this.resenasObtenidas[0].calificacion;
+    // this.resenaData.calificacion = this.resenasObtenidas[0].calificacion;
     this.resenaData.estado = this.resenasObtenidas[0].estado;
     this.resenaData.id_solicitud = this.resenasObtenidas[0].id_solicitud;
-    this.resenaData.created_at = this.resenasObtenidas[0].created_at;
-    this.resenaData.updated_at = this.resenasObtenidas[0].updated_at;
+    // this.resenaData.created_at = this.resenasObtenidas[0].created_at;
+    // this.resenaData.updated_at = this.resenasObtenidas[0].updated_at;
     
     
    })

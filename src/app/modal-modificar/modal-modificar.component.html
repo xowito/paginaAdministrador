@@ -15,21 +15,21 @@
         <app-sidebar></app-sidebar>
         <main role="main" class="col-md-6 ml-sm-auto col-lg-9 px-4">
             <form (submit)="modificarResena()"  class="ml-4 mr-4">
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="calificacion">Calificacion</label>
                   <input required type="text"
                     class="form-control" name="calificacion" id="calificacion" aria-describedby="helpId" [(ngModel)]="resenaData.calificacion" disabled="true" >
-                </div>
-                <div class="form-group">
+                </div> -->
+                <!-- <div class="form-group">
                   <label for="created_at">fecha emision reseña:</label>
                   <input required type="datetime"
-                    class="form-control" disabled="true" name="created_at" id="created_at" aria-describedby="helpId" [ngModel]="resenaData.created_at | date:'dd-MM-yyyy hh:mm:ss'">
-                </div>
-                <div class="form-group">
+                    class="form-control" disabled="true" name="created_at" id="created_at" aria-describedby="helpId" [ngModel]="resenaData.created_at | date:'YYY-MM-dd hh:mm:ss'">
+                </div> -->
+                <!-- <div class="form-group">
                   <label for="updated_at">fecha ultima actualizacion</label>
                   <input required type="datetime"
                     class="form-control" disabled="true" name="updated_at" id="updated_at" aria-describedby="helpId" [ngModel]="resenaData.updated_at  | date:'dd-MM-yyyy hh:mm:ss'">
-                </div>
+                </div> -->
                 <div class="form-group">
                   <label for="Descripcion">Descripcion</label>
                   <textarea  required type="text"
